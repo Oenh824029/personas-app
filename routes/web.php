@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComunaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -7,6 +8,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/prueba', function(){
-    return 'Prueba';
-});
+Route::get('/comunas', [ComunaController::class, 'index']);
