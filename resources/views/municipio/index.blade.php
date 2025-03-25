@@ -14,6 +14,7 @@
     
   <div class="container">
     <h1>Listado de Municipios</h1>
+    <a href=" {{ route('municipios.create') }} " class="btn btn-primary">Agregar</a>
   </div>
 
 
