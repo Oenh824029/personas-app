@@ -12,7 +12,7 @@
   </head>
   <body>
     
-  <div>
+  <div class="container">
     <h1>Listado de Municipios</h1>
   </div>
 
@@ -25,6 +25,7 @@
           <th scope="col">muni_codi</th>
           <th scope="col">muni_nomb</th>
           <th scope="col">depa_codi</th>
+          <th scope="col">depa_nomb</th>
         </tr>
       </thead>
       <tbody>
@@ -33,6 +34,7 @@
           <th scope="row"> {{ $municipio->muni_codi }} </th>
           <td> {{ $municipio->muni_nomb }} </td>
           <td> {{ $municipio->depa_codi }} </td>
+          <td> {{ $municipio->depa_nomb }} </td>
         </tr>
         @endforeach
 
