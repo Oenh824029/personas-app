@@ -14,7 +14,7 @@
     
   <div class="container">
     <h1>Listado de Departamentos</h1>
-    <!--<a href=" {{ route('municipios.create') }} " class="btn btn-primary">Agregar</a>-->
+    <a href=" {{ route('departamentos.create') }} " class="btn btn-primary">Agregar</a>
   </div>
 
 
