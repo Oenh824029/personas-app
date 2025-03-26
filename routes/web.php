@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ComunaController;
 use App\Http\Controllers\MunicipioController;
+use App\Http\Controllers\DepartamentoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,3 +24,6 @@ Route::get('/municipios/create',[MunicipioController::class, 'create'])->name('m
 Route::delete('/municipios/{municipio}',[MunicipioController::class, 'destroy'])->name('municipios.destroy');
 Route::put('/municipios/{municipio}',[MunicipioController::class, 'update'])->name('municipios.update');
 Route::get('/municipios/{municipio}/edit', [MunicipioController::class, 'edit'])->name('municipios.edit');
+
+/*rutas de la vista de departamentos*/
+Route::get('/departamentos', [DepartamentoController::class, 'index']);
