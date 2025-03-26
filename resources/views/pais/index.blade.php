@@ -11,6 +11,35 @@
     <title>Listado de Paises</title>
   </head>
   <body>
+
+    <!-- menu de navegación -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href=" {{ route('comunas.index') }} ">Comunas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=" {{ route('municipios.index') }}  ">Municipios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=" {{ route('departamentos.index') }}   ">Departamentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=" {{ route('paises.index') }}   ">Paises</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+<hr>
+  <!-- menu de navegación -->
     
   <div class="container">
     <h1>Listado de Paises</h1>
@@ -34,7 +63,8 @@
           <td> {{ $pais->pais_nomb }} </td>
           <td> {{ $pais->pais_capi }} </td>
 
-          <td>           
+          <td>                  
+               <a href=" {{ route('paises.edit',['pais'=>$pais->pais_codi]) }} " class="btn btn-info"> Editar</a>
               <form action=" {{ route('paises.destroy',['pais'=>$pais->pais_codi]) }} " 
               method="POST" style="display: inline-block">
                 @method('delete')

@@ -11,6 +11,35 @@
     <title>Listado de Departamentos</title>
   </head>
   <body>
+
+    <!-- menu de navegación -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href=" {{ route('comunas.index') }} ">Comunas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=" {{ route('municipios.index') }}  ">Municipios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=" {{ route('departamentos.index') }}   ">Departamentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=" {{ route('paises.index') }}   ">Paises</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+<hr>
+  <!-- menu de navegación -->
     
   <div class="container">
     <h1>Listado de Departamentos</h1>
