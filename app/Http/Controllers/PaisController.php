@@ -81,6 +81,13 @@ class PaisController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $pais = Pais::find($id);
+        $pais->delete();
+
+        $paises = DB::table('tb_pais')
+            ->select('tb_pais.*')
+            ->orderBy('tb_pais.pais_codi', 'desc')
+            ->get();
+        return view('pais.index',['paises'=>$paises]);
     }
 }
