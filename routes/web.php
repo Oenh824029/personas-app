@@ -3,6 +3,7 @@
 use App\Http\Controllers\ComunaController;
 use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\PaisController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,9 +27,13 @@ Route::put('/municipios/{municipio}',[MunicipioController::class, 'update'])->na
 Route::get('/municipios/{municipio}/edit', [MunicipioController::class, 'edit'])->name('municipios.edit');
 
 /*rutas de la vista de departamentos*/
-Route::get('/departamentos', [DepartamentoController::class, 'index'])->name('departamentos.index');;
+Route::get('/departamentos', [DepartamentoController::class, 'index'])->name('departamentos.index');
 Route::post('/departamentos', [DepartamentoController::class, 'store'])->name('departamentos.store');
 Route::get('/departamentos/create', [DepartamentoController::class, 'create'])->name('departamentos.create');
 Route::delete('/departamentos/{departamento}',[DepartamentoController::class, 'destroy'])->name('departamentos.destroy');
 Route::put('/departamentos/{departamento}',[DepartamentoController::class, 'update'])->name('departamentos.update');
 Route::get('/departamentos/{departamento}/edit', [DepartamentoController::class, 'edit'])->name('departamentos.edit');
+
+/*rutas de la vista de paises*/
+
+Route::get('/paises', [PaisController::class, 'index'])->name('paises.index');

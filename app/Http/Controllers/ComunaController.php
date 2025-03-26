@@ -66,7 +66,7 @@ class ComunaController extends Controller
             ->orderBy('muni_nomb')
             ->get();
 
-            return view('comuna.edit',['comuna'=>$comuna, 'municipios' => $municipios]);
+        return view('comuna.edit',['comuna'=>$comuna, 'municipios' => $municipios]);
     }
 
     /**

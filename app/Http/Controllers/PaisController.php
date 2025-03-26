@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pais;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PaisController extends Controller
 {
@@ -11,7 +13,11 @@ class PaisController extends Controller
      */
     public function index()
     {
-        //
+        $paises = DB::table('tb_pais')
+            ->select('tb_pais.*')
+            ->orderBy('tb_pais.pais_codi')
+            ->get();
+        return view('pais.index',['paises'=>$paises]);
     }
 
     /**
